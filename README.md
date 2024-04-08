@@ -19,17 +19,17 @@
    
      __-tambahkan kode ini :__
 
-          auto bond0
-          iface bond0 inet static
-              address 192.168.100.10
-              netmask 255.255.255.0
-              gateway 192.168.100.1
-              dns-nameservers 192.168.100.1 1.1.1.1
-              bond-slaves eth0 eth1
-              bond-mode balance-rr
-              bond-miimon 100
-              bond-downdelay 200
-              bond-updelay 200
+       auto bond0
+       iface bond0 inet static
+          address 192.168.100.10
+          netmask 255.255.255.0
+          gateway 192.168.100.1
+          dns-nameservers 192.168.100.1 1.1.1.1
+          bond-slaves eth0 eth1
+          bond-mode balance-rr
+          bond-miimon 100
+          bond-downdelay 200
+          bond-updelay 200
 
 
      __-tambah ip static eth0 dan eth1__
@@ -38,19 +38,19 @@
    
      __-tambahkan kode ini :__
    
-                        auto eth0
-                        iface eth0 inet static
-                            address 192.168.100.8
-                            netmask 255.255.255.0
-                            gateway 192.168.100.1
-                            dns-nameservers 192.168.100.1 1.1.1.1
+       auto eth0
+       iface eth0 inet static
+          address 192.168.100.8
+          netmask 255.255.255.0
+          gateway 192.168.100.1
+          dns-nameservers 192.168.100.1 1.1.1.1
    
-                        auto eth1
-                        iface eth1 inet static
-                            address 192.168.100.9
-                            netmask 255.255.255.0
-                            gateway 192.168.100.1
-                            dns-nameservers 192.168.100.1 1.1.1.1
+       auto eth1
+       iface eth1 inet static
+          address 192.168.100.9
+          netmask 255.255.255.0
+          gateway 192.168.100.1
+          dns-nameservers 192.168.100.1 1.1.1.1
    
       __-lalu :__
    
@@ -66,10 +66,10 @@
             eth1 : 192.168.100.9
 
 
-7. Install casa os
+8. Install casa os
    
          curl -fsSL https://get.casaos.io | sudo bash
-8. Konfigurasi Docker
+9. Konfigurasi Docker
    
    **-Install python**
 
