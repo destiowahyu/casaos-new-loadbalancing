@@ -10,6 +10,7 @@ services:
       - 8081:80
     depends_on:
       - mysql
+    restart: always
   php2:
     container_name: php-server2
     build: .
@@ -19,6 +20,7 @@ services:
       - 8082:80
     depends_on:
       - mysql
+    restart: always
   php3:
     container_name: php-server3
     build: .
@@ -28,6 +30,7 @@ services:
       - 8083:80
     depends_on:
       - mysql
+    restart: always
   php4:
     container_name: php-server4
     build: .
@@ -37,6 +40,7 @@ services:
       - 8084:80
     depends_on:
       - mysql
+    restart: always
   php5:
     container_name: php-server5
     build: .
@@ -46,6 +50,7 @@ services:
       - 8085:80
     depends_on:
       - mysql
+    restart: always
   mysql:
     container_name: mysql-server
     image: mysql:latest
@@ -58,6 +63,8 @@ services:
       MYSQL_PASSWORD: sandi_wordpress
     volumes:
       - ./mysql_data:/var/lib/mysql
+    restart: always
   redis:
     container_name: redis-server
     image: redis:latest
+    restart: always
