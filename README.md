@@ -25,8 +25,9 @@
      _-tambah ip static eth0 dan eth1_
          `nano /etc/network/interfaces`
    
-     _-tambahkan kode ini :_
-                        `auto eth0
+     __-tambahkan kode ini :__
+   
+                        auto eth0
                         iface eth0 inet static
                             address 192.168.100.8
                             netmask 255.255.255.0
@@ -37,12 +38,14 @@
                             address 192.168.100.9
                             netmask 255.255.255.0
                             gateway 192.168.100.1
-                            dns-nameservers 192.168.100.1 1.1.1.1`
-      _lalu :_
-         `sudo systemctl restart networking
-         sudo reboot`
+                            dns-nameservers 192.168.100.1 1.1.1.1
+   
+      __-lalu :__
+   
+         sudo systemctl restart networking
+         sudo reboot
 
-     _jadi nanti IPnya_
+     __-jadi nanti IPnya__
        bond0 : **192.168.100.10**
        eth0 : **192.168.100.8**
        eth1 : **192.168.100.9**
