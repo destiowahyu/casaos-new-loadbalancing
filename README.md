@@ -26,7 +26,8 @@
 
 
      __-tambah ip static eth0 dan eth1__
-         `nano /etc/network/interfaces`
+
+         nano /etc/network/interfaces
    
      __-tambahkan kode ini :__
    
