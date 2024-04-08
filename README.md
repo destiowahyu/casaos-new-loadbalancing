@@ -59,5 +59,6 @@
 
 
 7. Install casa os
-   `curl -fsSL https://get.casaos.io | sudo bash`
+   
+         curl -fsSL https://get.casaos.io | sudo bash
 8. 
