@@ -3,8 +3,10 @@
 1. untuk file linux armbian dengan wifi on bisa di [download disini](https://www.mediafire.com/file/2ywqxi302gzrp2i/Armbian_21.08.1_Amlogic-GXL_bullseye_current_5.10.60.img.xz/file)
 2. Lihat IP di router ISP
 3. Konek menggunakan IP tersebut di terminal
-4. `apt update`
-5. setting ip static untuk eth0 dan eth1, serta lakukan loadbalancing
+4. Lakukan :
+
+         apt update
+6. setting ip static untuk eth0 dan eth1, serta lakukan loadbalancing
    __Lakukan ini dulu__
 
        sudo apt-get update
