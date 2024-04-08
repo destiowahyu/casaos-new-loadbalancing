@@ -1,6 +1,3 @@
-#DESTIO WAHYU LANIO
-#A11.2021.13568
-
 
 FROM php:8.2-apache
 
