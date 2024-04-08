@@ -26,19 +26,19 @@
          `nano /etc/network/interfaces`
    
      _-tambahkan kode ini :_
-            `auto eth0
-            iface eth0 inet static
-                address 192.168.100.8
-                netmask 255.255.255.0
-                gateway 192.168.100.1
-                dns-nameservers 192.168.100.1 1.1.1.1`
-   
-            `auto eth1
-            iface eth1 inet static
-                address 192.168.100.9
-                netmask 255.255.255.0
-                gateway 192.168.100.1
-                dns-nameservers 192.168.100.1 1.1.1.1`
+               `auto eth0
+               iface eth0 inet static
+                   address 192.168.100.8
+                   netmask 255.255.255.0
+                   gateway 192.168.100.1
+                   dns-nameservers 192.168.100.1 1.1.1.1`
+      
+               auto eth1
+               iface eth1 inet static
+                   address 192.168.100.9
+                   netmask 255.255.255.0
+                   gateway 192.168.100.1
+                   dns-nameservers 192.168.100.1 1.1.1.1`
       _lalu :_
          `sudo systemctl restart networking
          sudo reboot`
