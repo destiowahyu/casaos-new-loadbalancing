@@ -78,6 +78,7 @@
 
        docker-compose --version
 10. Proses Pembuatan webserver
+    
     a. buat direktori **web** di dalam folder **DATA**
 
         mkdir /DATA/web
