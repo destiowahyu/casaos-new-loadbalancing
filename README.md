@@ -5,7 +5,7 @@
 3. Konek menggunakan IP tersebut di terminal
 4. Lakukan :
 
-         apt update
+       apt update
 6. setting ip static untuk eth0 dan eth1, serta lakukan loadbalancing
    __Lakukan ini dulu__
 
