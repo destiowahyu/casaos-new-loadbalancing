@@ -85,6 +85,7 @@
 
         cd /DATA/web
     c. copy file [docker-compose.yml](https://github.com/destiowahyu/casaos-new-loadbalancing/blob/main/docker-compose.yml) dari direktori github ini ke dalam folder **web** yang telah dibuat tadi
+
     d. copy juga file [Dockerfile]() dan masukkan kedalam direktori web
     
 
