@@ -1,0 +1,63 @@
+version: '3.3'
+
+services:
+  php:
+    container_name: php-server
+    build: .
+    volumes:
+      - ./htdocs:/var/www/html
+    ports:
+      - 8081:80
+    depends_on:
+      - mysql
+  php2:
+    container_name: php-server2
+    build: .
+    volumes:
+      - ./htdocs2:/var/www/html
+    ports:
+      - 8082:80
+    depends_on:
+      - mysql
+  php3:
+    container_name: php-server3
+    build: .
+    volumes:
+      - ./htdocs3:/var/www/html
+    ports:
+      - 8083:80
+    depends_on:
+      - mysql
+  php4:
+    container_name: php-server4
+    build: .
+    volumes:
+      - ./htdocs4:/var/www/html
+    ports:
+      - 8084:80
+    depends_on:
+      - mysql
+  php5:
+    container_name: php-server5
+    build: .
+    volumes:
+      - ./htdocs5:/var/www/html
+    ports:
+      - 8085:80
+    depends_on:
+      - mysql
+  mysql:
+    container_name: mysql-server
+    image: mysql:latest
+    ports:
+      - 3303:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: sandirahasia
+      MYSQL_DATABASE: wordpress_dp
+      MYSQL_USER: wordpress_user
+      MYSQL_PASSWORD: sandi_wordpress
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+  redis:
+    container_name: redis-server
+    image: redis:latest
