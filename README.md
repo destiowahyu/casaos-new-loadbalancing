@@ -23,6 +23,7 @@
 
      _-tambah ip static eth0 dan eth1_
          `nano /etc/network/interfaces`
+   
      _-tambahkan kode ini :_
             `auto eth0
             iface eth0 inet static
