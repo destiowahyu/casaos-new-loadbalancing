@@ -68,33 +68,33 @@
 
 8. Install casa os
    
-         curl -fsSL https://get.casaos.io | sudo bash
+       curl -fsSL https://get.casaos.io | sudo bash
 9. Konfigurasi Docker
    
    **-Install python**
 
-         sudo apt-get update
-         sudo apt-get install python3 python3-pip
+       sudo apt-get update
+       sudo apt-get install python3 python3-pip
    **-Install Docker**
 
-         sudo apt-get update
-         sudo apt-get upgrade
-         curl -fsSL test.docker.com -o get-docker.sh && sh get-docker.sh
+       sudo apt-get update
+       sudo apt-get upgrade
+       curl -fsSL test.docker.com -o get-docker.sh && sh get-docker.sh
    
    **-Add user**
 
-         sudo usermod -aG docker destiowahyu
+       sudo usermod -aG docker destiowahyu
    **-Coba Helloworld**
    
-         docker run hello-world
+       docker run hello-world
 
    **-Upgrade pip**
 
-         pip install --upgrade pip pipx
+       pip install --upgrade pip pipx
 
    **-Install Docker Compose**
 
-         pipx install docker-compose
+       pipx install docker-compose
 
 
    
