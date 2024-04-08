@@ -8,7 +8,8 @@
    _-Konfigurasi Bounding (gabungan eth0 dan eth0)_
        `sudo nano /etc/network/interfaces.d/bond0`
      _-tambahkan kode ini :_
-          `auto bond0
+
+          auto bond0
           iface bond0 inet static
               address 192.168.100.10
               netmask 255.255.255.0
@@ -18,7 +19,7 @@
               bond-mode balance-rr
               bond-miimon 100
               bond-downdelay 200
-              bond-updelay 200`
+              bond-updelay 200
 
 
      _-tambah ip static eth0 dan eth1_
