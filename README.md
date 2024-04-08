@@ -68,6 +68,7 @@
    
          curl -fsSL https://get.casaos.io | sudo bash
 8. Konfigurasi Docker
+   
    **-Install python**
 
          sudo apt-get update
