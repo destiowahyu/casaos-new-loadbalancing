@@ -53,9 +53,9 @@
           dns-nameservers 192.168.100.1 1.1.1.1
    
       __-lalu :__
-   
-         sudo systemctl restart networking
-         sudo reboot
+
+       sudo systemctl restart networking
+       sudo reboot
 
      __-jadi nanti IPnya__
    
