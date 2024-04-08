@@ -5,6 +5,11 @@
 3. Konek menggunakan IP tersebut di terminal
 4. `apt update`
 5. setting ip static untuk eth0 dan eth1, serta lakukan loadbalancing
+   __Lakukan ini dulu__
+
+       sudo apt-get update
+       sudo apt-get install ifenslave
+
 
    __-Konfigurasi Bounding (gabungan eth0 dan eth0)__
    
@@ -62,4 +67,22 @@
 7. Install casa os
    
          curl -fsSL https://get.casaos.io | sudo bash
-8. 
+8. Konfigurasi Docker
+   **-Install python**
+
+         sudo apt-get update
+         sudo apt-get install python3 python3-pip
+   **-Install Docker**
+
+         sudo apt-get update
+         sudo apt-get upgrade
+         curl -fsSL test.docker.com -o get-docker.sh && sh get-docker.sh
+   
+   **-Add user**
+
+         sudo usermod -aG docker destiowahyu
+   **-Coba Helloworld**
+   
+         docker run hello-world 
+
+   
