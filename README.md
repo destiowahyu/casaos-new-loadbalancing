@@ -84,6 +84,18 @@
          sudo usermod -aG docker destiowahyu
    **-Coba Helloworld**
    
-         docker run hello-world 
+         docker run hello-world
+
+   **-Upgrade pip**
+
+         pip install --upgrade pip pipx
+
+   **-Install Docker Compose**
+
+         pipx install docker-compose
+
+
+   
+
 
    
