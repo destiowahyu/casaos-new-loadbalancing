@@ -86,7 +86,16 @@
         cd /DATA/web
     c. copy file [docker-compose.yml](https://github.com/destiowahyu/casaos-new-loadbalancing/blob/main/docker-compose.yml) dari direktori github ini ke dalam folder **web** yang telah dibuat tadi
 
-    d. copy juga file [Dockerfile]() dan masukkan kedalam direktori web
+    d. copy juga file [Dockerfile](https://github.com/destiowahyu/casaos-new-loadbalancing/blob/main/Dockerfile) dan masukkan kedalam direktori web
+
+    e. buat direktori htdocs sampai htdocs5 dan juga mysql_data
+
+        mkdir htdocs
+        mkdir htdocs2
+        mkdir htdocs3
+        mkdir htdocs4
+        mkdir htdocs5
+        mkdir mysql_data
     
 
 
