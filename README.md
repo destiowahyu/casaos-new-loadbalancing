@@ -37,6 +37,7 @@
                             netmask 255.255.255.0
                             gateway 192.168.100.1
                             dns-nameservers 192.168.100.1 1.1.1.1
+   
                         auto eth1
                         iface eth1 inet static
                             address 192.168.100.9
