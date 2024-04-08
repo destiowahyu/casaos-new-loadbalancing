@@ -71,30 +71,21 @@
        curl -fsSL https://get.casaos.io | sudo bash
 9. Konfigurasi Docker
    
-   **-Install python**
-
-       sudo apt-get update
-       sudo apt-get install python3 python3-pip
-   **-Install Docker**
-
-       sudo apt-get update
-       sudo apt-get upgrade
-       curl -fsSL test.docker.com -o get-docker.sh && sh get-docker.sh
-   
-   **-Add user**
-
-       sudo usermod -aG docker destiowahyu
-   **-Coba Helloworld**
-   
-       docker run hello-world
-
-   **-Upgrade pip**
-
-       pip install --upgrade pip pipx
-
    **-Install Docker Compose**
 
-       pipx install docker-compose
+       apt install docker-compose
+   **-Cek apakah docker compose sudah terinstall**
+
+       docker-compose --version
+10. Proses Pembuatan webserver
+    a. buat direktori **web** di dalam folder **DATA**
+
+        mkdir /DATA/web
+    b. Masuk ke direktori
+
+        cd /DATA/web
+    a. copy file `docker-compose.yml` yang ada di direktori github ini
+    
 
 
    
