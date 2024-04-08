@@ -5,6 +5,7 @@
 3. Konek menggunakan IP tersebut di terminal
 4. `apt update`
 5. setting ip static untuk eth0 dan eth1, serta lakukan loadbalancing
+
    __-Konfigurasi Bounding (gabungan eth0 dan eth0)__
    
        sudo nano /etc/network/interfaces.d/bond0
