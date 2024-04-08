@@ -58,8 +58,8 @@
        sudo reboot
 
      __-jadi nanti IPnya__
-   
-            bond0 : 192.168.100.10
+
+   **bond0 : 192.168.100.10**
    
             eth0 : 192.168.100.8
    
