@@ -57,10 +57,10 @@ services:
     ports:
       - 3303:3306
     environment:
-      MYSQL_ROOT_PASSWORD: sandirahasia
+      MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: wordpress_dp
-      MYSQL_USER: wordpress_user
-      MYSQL_PASSWORD: sandi_wordpress
+      MYSQL_USER: destiowahyu
+      MYSQL_PASSWORD: password
     volumes:
       - ./mysql_data:/var/lib/mysql
     restart: always
