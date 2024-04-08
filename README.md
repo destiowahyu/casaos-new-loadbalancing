@@ -96,6 +96,42 @@
         mkdir htdocs4
         mkdir htdocs5
         mkdir mysql_data
+
+    f. jalankan perintah docker compose
+
+        docker-compose up -d --build
+
+    g. Buat docker compose auto start saat boot
+
+    - Buat file unit systemd
+
+          sudo nano /etc/systemd/system/docker-compose@.service
+    - Tambahkan ini sebagai isinya
+
+          [Unit]
+          Description=Docker Compose Service for %i
+          Requires=docker.service
+          After=docker.service
+              
+          [Service]
+          Type=oneshot
+          RemainAfterExit=yes
+          WorkingDirectory=/DATA/web
+          ExecStart=/usr/local/bin/docker-compose up -d
+          ExecStop=/usr/local/bin/docker-compose down
+          TimeoutStartSec=0
+              
+          [Install]
+          WantedBy=multi-user.target
+
+       `WorkingDirectory=/DATA/web` Menyesuaikan dengan lokasi file docker-compose.yml
+
+      - Aktifkan service
+
+            sudo systemctl enable docker-compose@webserver.service
+            sudo systemctl start docker-compose@webserver.service
+
+          `webserver` bebas mau dinamai apa
     
 
 
