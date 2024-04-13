@@ -6,7 +6,8 @@
 4. Lakukan :
 
        apt update
-5. setting ip static untuk eth0 dan eth1, serta lakukan loadbalancing
+       apt upgrade
+6. setting ip static untuk eth0 dan eth1, serta lakukan loadbalancing
    __Lakukan ini dulu__
 
        sudo apt-get update
