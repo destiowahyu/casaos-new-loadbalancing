@@ -7,7 +7,7 @@
 
        apt update
        apt upgrade
-6. setting ip static untuk eth0 dan eth1, serta lakukan loadbalancing
+5. setting ip static untuk eth0 dan eth1, serta lakukan loadbalancing
    __Lakukan ini dulu__
 
        sudo apt-get update
@@ -67,10 +67,10 @@
    **eth1 : 192.168.100.9**
 
 
-8. Install casa os
+6. Install casa os
    
        curl -fsSL https://get.casaos.io | sudo bash
-9. Konfigurasi Docker
+7. Konfigurasi Docker
    
    **-Install Docker Compose**
 
@@ -78,7 +78,7 @@
    **-Cek apakah docker compose sudah terinstall**
 
        docker-compose --version
-10. Proses Pembuatan webserver
+8. Proses Pembuatan webserver
     
     a. buat direktori **web** di dalam folder **DATA**
 
@@ -134,6 +134,37 @@
             sudo systemctl start docker-compose@webserver.service
 
           `webserver` bebas mau dinamai apa
+
+9. Konfigurasi Zerotier supaya bisa di remote
+    
+    a. install zerotier
+
+       curl -s https://install.zerotier.com | sudo bash
+   b. cek dulu
+   
+       zerotier-cli info
+   c. join ke network
+
+       zerotier-cli join <network id>
+   Ganti `<networkid>` Menyesuaikan network id di zerotier
+11. Supaya bisa remote yang lain juga di jaringan lokal, misal router
+    
+    a. Aktifkan NAT Masquerade
+    diliat dulu interfacenya mau pake `eth0` atau `eth1`
+    misal mau pake `eth1` karena biasanya `eth1` pakai usb to lan gigabit, jadinya gini :
+
+        sudo iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
+        sudo iptables -A FORWARD -i ztc25nztai -o eth1 -m state --state RELATED,ESTABLISHED -j ACCEPT
+        sudo iptables -A FORWARD -i eth1 -o ztc25nztai -j ACCEPT
+
+    b. pakai ini supaya pengaturan tersimpan setelah reboot
+
+        sudo netfilter-persistent save
+        sudo netfilter-persistent reload
+
+
+
+    
     
 
 
