@@ -40,6 +40,11 @@ E. Tinggal install CASA OS
 
     curl -fsSL https://get.casaos.io | sudo bash
 
+F. Ubah IP static dengan cara :
+
+    sudo nmtui
+udah abis itu setting kaya biasa
+
 
 
 *****************************************************************************************
