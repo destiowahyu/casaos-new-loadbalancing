@@ -1,5 +1,54 @@
 # casaos-new-loadbalancing
 
+NOTE : MENGINGAT REPO ARMBIAN SEKARANG UDAH EXPIRED JADI GABISA INSTALL CASA OS, JADI HARUS IKUTIN LANGKAH DIBAWAH INI DULU SEBELUM INSTALL CASA OS :
+
+A. Hapus repo bawaan armbian dengan cara :
+
+    sudo nano /etc/apt/sources.list
+
+Lalu hapus semua isinya dan ganti dengan :
+
+    deb http://archive.debian.org/debian bullseye main contrib non-free
+    deb http://archive.debian.org/debian bullseye-updates main contrib non-free
+    deb http://archive.debian.org/debian bullseye-backports main contrib non-free
+
+B. Hapus repo yang bermasalah
+
+    sudo rm -f /etc/apt/sources.list.d/armbian.list
+    sudo rm -f /etc/apt/sources.list.d/armbian-config.sources
+    sudo rm -f /usr/share/keyrings/armbian*.gpg
+
+C. Bersihkan cache APT & Update
+
+    sudo apt clean
+    sudo rm -rf /var/lib/apt/lists/*
+    sudo apt update -o Acquire::Check-Valid-Until=false
+    sudo apt upgrade -y
+pastikan gaada error kaya gini :
+
+``GPG error``
+
+``Conflicting values set for option Signed-By``
+
+``Release file not found``
+
+D. Install Dependensi dasar
+
+    sudo apt install -y curl wget sudo ca-certificates gnupg
+
+E. Tinggal install CASA OS
+
+    curl -fsSL https://get.casaos.io | sudo bash
+
+
+
+*****************************************************************************************
+
+*****************************************************************************************
+
+
+**LANJUT STEP AWAL UNTUK INSTALL ARMBIAN**
+
 1. untuk file linux armbian dengan wifi on bisa di [download disini](https://www.mediafire.com/file/2ywqxi302gzrp2i/Armbian_21.08.1_Amlogic-GXL_bullseye_current_5.10.60.img.xz/file)
 2. Lihat IP di router ISP
 3. Konek menggunakan IP tersebut di terminal
@@ -82,7 +131,7 @@
     
     a. buat direktori **web** di dalam folder **DATA**
 
-        mkdir /DATA/web
+       mkdir /DATA/web
     b. Masuk ke direktori **web**
 
         cd /DATA/web
